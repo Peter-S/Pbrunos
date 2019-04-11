@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 (ViewGroup) findViewById(R.id.custom_toast_container));
 
         TextView text = (TextView) layout.findViewById(R.id.text2);
-        text.setText("A  L  E  R  T");
+        text.setText("A  L  E  R  T!!");
 
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
