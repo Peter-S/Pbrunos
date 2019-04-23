@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/parent_layout">
+    
+    <com.theophrast.ui.widget.SquareImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/movie_image"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10sp"
+        android:text="ZOMBIES!!!"
+        android:id="@+id/movie_text1"
+        android:layout_toRightOf="@id/movie_image"
+        android:textColor="#000"
+        android:layout_marginLeft="10sp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/movie_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_text1"
+        android:layout_toRightOf="@id/year"
+        android:paddingLeft="5dp"
+        android:paddingTop="1sp"
+        android:text="AND MORE ZOMBIES!!!!!"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/movie_text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_text2"
+        android:layout_toRightOf="@id/director"
+        android:paddingLeft="5dp"
+        android:paddingTop="1sp"
+        android:text="AND MORE ZOMBIES!!!!!"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/movie_text1"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/movie_image"
+        android:text="Year: "
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/year"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/movie_image"
+        android:text="Director: "
+        android:textColor="#000"/>
+
+</RelativeLayout>

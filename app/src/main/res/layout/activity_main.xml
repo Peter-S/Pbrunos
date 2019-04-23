@@ -144,11 +144,10 @@
         android:id="@+id/button12"
         android:layout_width="155dp"
         android:layout_height="75dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="toast1"
-        android:text="Bottom Toast"
+        android:onClick="zombieMovies"
+        android:text="Zombie Movies"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 

@@ -3,6 +3,7 @@ package com.pbrunos.pbrunos;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,18 +15,25 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.pbrunos.pbrunos.MESSAGE";
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: main activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
+        EditText editText = findViewById(R.id.editText);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
+
+    public void zombieMovies(View view) {
+        Intent intent = new Intent(this, DisplayZombieActivity.class);
         startActivity(intent);
     }
 
@@ -70,5 +78,4 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);
         toast.show();
     }
-
 }
