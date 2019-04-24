@@ -17,6 +17,8 @@ import com.theophrast.ui.widget.SquareImageView;
 
 import java.util.ArrayList;
 
+import static com.pbrunos.pbrunos.MainActivity.EXTRA_MESSAGE;
+
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
     private static final String TAG = "RecyclerViewAdapter";
@@ -46,6 +48,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return holder;
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called");
@@ -64,10 +68,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: clicked on " + mmovieText1.get(position));
-                Toast.makeText(mContext, mmovieText4.get(position), Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(v.getContext(), DisplayMovieInfo.class);
-//                v.getContext().startActivity(intent);
-
+//                Toast.makeText(mContext, mmovieText4.get(position), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), DisplayMovieInfo.class);
+                String message = mmovieText4.get(position).toString();
+                intent.putExtra(EXTRA_MESSAGE, message);
+                v.getContext().startActivity(intent);
             }
         });
     }
