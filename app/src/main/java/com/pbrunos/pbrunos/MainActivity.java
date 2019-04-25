@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    // test comment
+
     public void toast1(View view) {
         Toast.makeText(MainActivity.this, "B o t t o m    T o a s t", Toast.LENGTH_SHORT).show();
     }
