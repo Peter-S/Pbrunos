@@ -3,14 +3,19 @@ package com.pbrunos.pbrunos;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: main activity");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
     }
 
 
@@ -80,5 +87,23 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
+    }
+
+    // This code is for the toolbar
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.go_about:
+                // User chose the "Settings" item, show the app settings UI...
+                return true;
+
+            default:
+                // If we got here, the user's action was not recognized.
+                // Invoke the superclass to handle it.
+                return super.onOptionsItemSelected(item);
+
+        }
     }
 }
