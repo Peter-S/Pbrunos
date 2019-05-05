@@ -3,7 +3,7 @@
 
     <item
         app:id="@+id/go_about"
-        app:icon="@drawable/ic_launcher_background"
+        app:icon="@drawable/ic_baseline_person_24px"
         app:title="action_about"
         app:showAsAction="ifRoom"/>
 
