@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:app="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        app:id="@+id/go_about"
-        app:icon="@drawable/ic_baseline_person_24px"
-        app:title="action_about"
-        app:showAsAction="ifRoom"/>
+        android:id="@+id/go_about"
+        android:icon="@drawable/ic_baseline_person_24px"
+        app:showAsAction="ifRoom"
+        android:title="action_about" />
 
 </menu>

@@ -91,19 +91,23 @@ public class MainActivity extends AppCompatActivity {
 
     // This code is for the toolbar
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.go_about:
-                // User chose the "Settings" item, show the app settings UI...
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
                 return true;
 
             default:
-                // If we got here, the user's action was not recognized.
-                // Invoke the superclass to handle it.
                 return super.onOptionsItemSelected(item);
-
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actions, menu);
+        return true;
     }
 }
