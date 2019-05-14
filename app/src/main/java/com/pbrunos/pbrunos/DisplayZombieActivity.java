@@ -3,15 +3,21 @@ package com.pbrunos.pbrunos;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class DisplayZombieActivity extends Activity {
+public class DisplayZombieActivity extends AppCompatActivity {
 
 
     private static final String TAG = "started";
@@ -27,6 +33,15 @@ public class DisplayZombieActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_zombie);
         initImageBitmaps();
+
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+        // Get a support ActionBar corresponding to this toolbar
+        ActionBar ab = getSupportActionBar();
+
+        // Enable the Up button
+        ab.setDisplayHomeAsUpEnabled(true);
     }
     
     private void initImageBitmaps() {
@@ -168,5 +183,26 @@ public class DisplayZombieActivity extends Activity {
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(mmovieImageUrls, mmovieText1, mmovieText2, mmovieText3, mmovieText4, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    //toolbar
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.go_about:
+                Intent intent = new Intent(this, About.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actions, menu);
+        return true;
     }
 }
