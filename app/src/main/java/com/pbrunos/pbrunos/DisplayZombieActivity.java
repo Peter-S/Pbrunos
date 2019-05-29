@@ -42,6 +42,7 @@ public class DisplayZombieActivity extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("Zombie Movies");
     }
     
     private void initImageBitmaps() {

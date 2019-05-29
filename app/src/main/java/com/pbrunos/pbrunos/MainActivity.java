@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void trafficCams(View view) {
+        Intent intent = new Intent(this, TrafficCamActivity.class);
+        startActivity(intent);
+    }
+
     // test comment
 
     public void toast1(View view) {
@@ -110,4 +115,6 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.actions, menu);
         return true;
     }
+
+
 }

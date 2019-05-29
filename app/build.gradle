@@ -36,5 +36,8 @@ dependencies {
     //square ??
     implementation 'com.github.Theophrast:SquareImageView:1.0.1'
 
+//    volley
+    implementation 'com.android.volley:volley:1.1.1'
+
 
 }

@@ -21,6 +21,7 @@ public class About extends AppCompatActivity {
 
         // Enable the Up button
         ab.setDisplayHomeAsUpEnabled(true);
+        ab.setTitle("About");
     }
 
 }

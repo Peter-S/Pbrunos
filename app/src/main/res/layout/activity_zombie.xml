@@ -14,7 +14,8 @@
         android:layout_height="555dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="48dp">
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="91dp">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -22,15 +23,14 @@
         android:id="@+id/textView5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Z O M B I E      M O V I E S !!"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:layout_alignTop="@+id/my_toolbar"
+        android:layout_marginTop="62dp"
         android:fontFamily="casual"
+        android:text="Z O M B I E      M O V I E S !!"
         android:textAlignment="center"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -38,8 +38,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
 </RelativeLayout>
 
 

@@ -130,11 +130,10 @@
         android:id="@+id/button13"
         android:layout_width="155dp"
         android:layout_height="75dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="toast2"
-        android:text="Top Toast"
+        android:layout_marginEnd="16dp"
+        android:onClick="trafficCams"
+        android:text="Traffic Cams"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
