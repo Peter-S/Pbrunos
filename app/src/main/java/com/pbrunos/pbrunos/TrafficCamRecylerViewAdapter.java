@@ -47,6 +47,7 @@ public class TrafficCamRecylerViewAdapter extends RecyclerView.Adapter<TrafficCa
                 .into(holder.squareImageView);
         holder.lable.setText(c.label);
         holder.owner.setText(c.owner);
+
         
 //        holder.parent_tc.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -77,6 +78,7 @@ public class TrafficCamRecylerViewAdapter extends RecyclerView.Adapter<TrafficCa
             owner = itemView.findViewById(R.id.tc_owner);
             //corrdinates = itemView.findViewById(R.id.tc_corrdinats);
             parent_tc = itemView.findViewById(R.id.parent_tc);
+
         }
     }
 }

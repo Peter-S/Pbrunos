@@ -2,4 +2,7 @@
     <string name="app_name">Pbrunos</string>
     <string name="edit_message">Enter a Message</string>
     <string name="button_send">Send</string>
+    <string name="displayName">com.pbrunos.pbrunos.displayName</string>
+    <string name="email">com.pbrunos.pbrunos.email</string>
+    <string name="password">com.pbrunos.pbrunos.password</string>
 </resources>

@@ -77,7 +77,7 @@ public class TrafficCamActivity extends AppCompatActivity {
 
                                         coords
                                 );
-                                //Log.d(TAG, "Camera Lable :  " + camera.getString("cameralabel"));
+                                Log.d(TAG, "Camera Lable :  " + camera.getDouble("ypos"));
                                 cameraData.add(c);
 
                             }

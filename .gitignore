@@ -10,3 +10,5 @@
 .externalNativeBuild
 /.idea
 /.gradle
+/.secrets.xml
+.secrets.xml
